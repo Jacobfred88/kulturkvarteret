@@ -1,0 +1,9 @@
+@import "tailwindcss" theme(static);
+@source "../views/";
+@source "../../app/";
+
+
+body {
+  background:black;
+  color:white;
+}
