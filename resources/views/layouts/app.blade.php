@@ -23,14 +23,10 @@
         @yield('content')
       </main>
 
-      @hasSection('sidebar')
-        <aside class="sidebar">
-          @yield('sidebar')
-        </aside>
-      @endif
-
       @include('sections.footer')
     </div>
+
+    <x-debug />
 
     @php(do_action('get_footer'))
     @php(wp_footer())

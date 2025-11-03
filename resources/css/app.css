@@ -1,9 +1,59 @@
-@import "tailwindcss" theme(static);
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import "tailwindcss";
 @source "../views/";
 @source "../../app/";
 
+@theme {
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-xxl: 1640px;
+  --breakpoint-display: 2000px;
+
+  --color-black: #171717;
+  --color-white: #ffffff;
+
+  --text-*: initial;
+  --text-12: 0.75rem;
+  --text-12--line-height: 1.16;
+  --text-16: 1rem;
+  --text-16--line-height: 1.33;
+  --text-18: 1.125rem;
+  --text-18--line-height: 1.1;
+  --text-24: 1.5rem;
+  --text-24--line-height: 1.08;
+  --text-32: 2rem;
+  --text-32--line-height: 1;
+  --text-40: 2.5rem;
+  --text-40--line-height: 1;
+  --text-56: 3.5rem;
+  --text-56--line-height: 1;
+  --text-72: 4.5rem;
+  --text-72--line-height: 1;
+
+  --font-sans:
+    "Montserrat", system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol", "Noto Color Emoji";
+}
 
 body {
-  background:black;
-  color:white;
+  @apply bg-black text-white font-sans font-normal antialiased overflow-x-clip;
+  @apply overscroll-y-none;
+}
+
+.container {
+  @apply max-w-none mx-auto px-2.5;
+}
+
+.max-container {
+  max-width: calc(1680 / 16 * 1rem);
+}
+
+.grid {
+  @apply grid-cols-12 gap-x-2.5;
+}
+
+[x-cloak] {
+  display: none !important;
 }

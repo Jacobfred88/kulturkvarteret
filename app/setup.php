@@ -79,6 +79,17 @@ add_action('after_setup_theme', function () {
         'primary_navigation' => __('Primary Navigation', 'sage'),
     ]);
 
+      add_filter('upload_mimes', function ($mime_types) {
+        $mime_types['svg'] = 'image/svg+xml';
+
+        return $mime_types;
+    }, 1, 1);
+
+     add_action( 'init', function () {
+        $role = get_role( 'editor' );
+        $role->add_cap( 'edit_theme_options', true );
+    }, 11 );
+
     /**
      * Disable the default block patterns.
      *
@@ -128,7 +139,19 @@ add_action('after_setup_theme', function () {
      * @link https://developer.wordpress.org/reference/functions/add_theme_support/#customize-selective-refresh-widgets
      */
     add_theme_support('customize-selective-refresh-widgets');
+
+    add_image_size( 'xs', 380, 99999 );
+    add_image_size( 'sm', 640, 99999 );
+    add_image_size( 'md', 768, 99999 );
+    add_image_size( 'lg', 1080, 99999 );
+    add_image_size( 'xl', 1440, 99999 );
+    add_image_size( 'xxl', 1680, 99999 );
+    add_image_size( 'display', 1800, 99999 );
+    add_image_size( 'display2x', 2400, 99999 );
+
 }, 20);
+
+add_filter( 'show_admin_bar', '__return_false' );
 
 /**
  * Register the theme sidebars.

@@ -1,8 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
-  @while(have_posts()) @php(the_post())
-    @include('partials.page-header')
-    @includeFirst(['partials.content-page', 'partials.content'])
-  @endwhile
+  @if (get_field('layout_blocks'))
+      @foreach (get_field('layout_blocks') as $block)
+          @include('blocks.' . $block['acf_fc_layout'], $block)
+      @endforeach
+  @endif
 @endsection
