@@ -4,7 +4,6 @@ namespace App\Fields;
 
 use Log1x\AcfComposer\Field;
 use StoutLogic\AcfBuilder\FieldsBuilder;
-use App\Fields\Partials\Theme;
 
 class Layout extends Field
 {
@@ -26,7 +25,6 @@ class Layout extends Field
             ->or('post_type', '==', 'reusableblocks');
 
         $layout
-        ->addFields($this->get(Theme::class))
         ->addFlexibleContent('layout_blocks',[
             'button_label' => 'Add layout',
             'label' => 'Blocks',

@@ -5,7 +5,6 @@ namespace App\Fields;
 use Log1x\AcfComposer\Builder;
 use Log1x\AcfComposer\Field;
 use App\Fields\Partials\Media;
-use App\Fields\Partials\Theme;
 
 class Page extends Field
 {

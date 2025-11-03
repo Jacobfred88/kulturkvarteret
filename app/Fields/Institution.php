@@ -5,7 +5,6 @@ namespace App\Fields;
 use Log1x\AcfComposer\Builder;
 use Log1x\AcfComposer\Field;
 use App\Fields\Partials\Media;
-use App\Fields\Partials\Theme;
 
 class Institution extends Field
 {
@@ -26,7 +25,6 @@ class Institution extends Field
             ->or('post_type', '==', 'foodanddrink');
 
         $institutions
-        ->addFields($this->get(Theme::class))
             ->addFields($this->get(Media::class))
                 ->modifyField('mediagroup', ['label' => 'Cover', 'instructions' => 'Used on archive pages. Format: 2000x1205px ( JPG )'])
             ->addGroup('page')
