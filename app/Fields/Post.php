@@ -44,9 +44,6 @@ class Post extends Field
                 'label' => 'Blocks',
                 'instructions' => 'You can add as any content blocks as you like!',
             ])
-                ->addLayout(require  __DIR__ . '../../blocks/ReusableBlock.php',[
-                    'label' => '⚙️ Reusable'
-                ])
             ->endFlexibleContent();
 
         return $posts->build();

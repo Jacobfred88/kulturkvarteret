@@ -63,10 +63,6 @@ class ResponsiveMedia extends Partial
                     'instructions' => 'Add the video URL from Vimeo ( use: HD 720p ). Format: Portrait ( 2000 x 2600 )',
                 ])
                 ->conditional('mediatype', '==', 'ambientvideo')
-                ->addText('videoid', [
-                    'label' => 'Vimeo video id',
-                    'instructions' => 'If you provide and id a PLAY button will display on the image and open a videoplayer when you click it. <br />The id can be found in the url on vimeo. It looks something like this: 405353889',
-                ])
             ->endGroup();
 
         return $responsiveMedia;
