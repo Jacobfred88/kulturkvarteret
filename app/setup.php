@@ -97,6 +97,11 @@ add_action('after_setup_theme', function () {
         remove_menu_page('edit-comments.php');
     });
 
+    add_action( 'wp_enqueue_scripts', function (){
+            wp_dequeue_style( 'global-styles' );
+        } );
+
+
     /**
      * Disable comments and pingbacks in the dashboard.
      */

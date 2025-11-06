@@ -34,10 +34,12 @@ class Institution extends Field
             ->addTextArea('headline', [
                 'label' => 'Headline',
                 'rows' => 3,
+                'instructions' => 'This headline will override the default post title',
             ])
             ->addWysiwyg('intro', [
                 'label' => 'Intro',
                 'toolbar' => 'basic',
+                'instructions' => 'This text appears below the headline. When this item is referenced in a related module.',
             ])
             ->addFlexibleContent('layout_blocks',[
                 'button_label' => 'Add layout',

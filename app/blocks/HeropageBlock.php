@@ -2,13 +2,15 @@
 
 namespace App;
 use StoutLogic\AcfBuilder\FieldsBuilder;
+use App\Fields\Partials\ResponsiveMedia;
 
 $module = new FieldsBuilder('heropage');
 
-// $module
-//     ->addTextArea('headline', [
-//         'label' => 'Headline',
-//         'new_lines' => 'br'
-//     ])
+$module
+    ->addFields($this->get(ResponsiveMedia::class))
+    ->addTextArea('headline', [
+    'label' => 'Headline',
+    'new_lines' => 'br'
+    ]);
 
 return $module;

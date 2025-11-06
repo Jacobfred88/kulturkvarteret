@@ -10,5 +10,10 @@ $module
       ->addTextArea('headline', [
         'label' => 'Headline',
         'new_lines' => 'br'
+      ])
+      ->addTextArea('nudge', [
+        'label' => 'Nudge text',
+        'new_lines' => 'br'
       ]);
+
 return $module;

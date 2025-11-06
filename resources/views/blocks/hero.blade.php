@@ -4,5 +4,8 @@
     </div>
     <div class="container relative">
         <h1 class="text-50 text-white uppercase text-center font-medium mb-20">{{ $headline }}</h1>
+        @if (!empty($nudge))
+            <p class="text-white text-center mb-20">{{ $nudge }}</p>
+        @endif
     </div>
 </section>
