@@ -8,6 +8,9 @@ import ScrollToPlugin from "gsap/ScrollToPlugin";
 
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
+import { Logo } from "./components/logo";
+import { Hero } from "./components/hero";
+
 document.addEventListener("DOMContentLoaded", function () {
   Alpine.store("menu", {
     open: false,
@@ -22,5 +25,8 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     },
   });
+
+  Logo();
+  Hero();
   Alpine.start();
 });

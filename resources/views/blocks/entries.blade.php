@@ -1,4 +1,4 @@
-<section data-block-name="entries">
+<section data-block-name="entries" class="overflow-hidden">
     <div class="container grid py-32">
         <div class="col-span-12 lg:col-span-3">
             @if ($headline)
