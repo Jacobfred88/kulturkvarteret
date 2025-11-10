@@ -62,6 +62,14 @@ body {
   @apply grid-cols-12 gap-x-5;
 }
 
+.link-btn {
+  @apply underline underline-offset-3 decoration-1;
+
+  &:after {
+    @apply content-['\00a0→'] text-[0.75em];
+  }
+}
+
 [x-cloak] {
   display: none !important;
 }
