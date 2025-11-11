@@ -1,22 +1,22 @@
-<section data-block-name="content">
-    <div class="container grid py-32">
+<section data-block-name="content" class="my-24 md:my-36">
+    <div class="container grid">
         <div class="col-span-12 lg:col-span-3">
             @if ($headline)
-                <h2 class="text-32 mb-5">{{ $headline }}</h2>
+                <h2 class="text-24 md:text-30 mb-10">{{ $headline }}</h2>
             @endif
 
             @if ($asidetext)
-                <div class="mb-5">{!! $asidetext !!}</div>
+                <div class="mb-10">{!! $asidetext !!}</div>
             @endif
 
         </div>
         <div class="col-span-12 lg:col-span-6">
             @if ($text)
-                <div class="mb-5">{!! $text !!}</div>
+                <div class="richtext">{!! $text !!}</div>
             @endif
 
             @if ($link)
-                <a href="{{ $link['url'] }}" target="{{ $link['target'] }}">{{ $link['title'] }}</a>
+                <a href="{{ $link['url'] }}" target="{{ $link['target'] }}" class="link-btn mt-10 inline-block">{{ $link['title'] }}</a>
             @endif
         </div>
     </div>

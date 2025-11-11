@@ -16,6 +16,10 @@
   --color-white: #ffffff;
 
   --text-*: initial;
+
+  --text-10: calc(10 / 16 * 1rem);
+  --text-10--line-height: 1;
+
   --text-14: calc(14 / 16 * 1rem);
   --text-14--line-height: 1.1875;
 
@@ -67,6 +71,45 @@ body {
 
   &:after {
     @apply content-['\00a0→'] text-[0.75em];
+  }
+}
+
+.richtext {
+  > * {
+    margin: 2rem 0;
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  strong {
+    @apply font-bold;
+  }
+
+  ul {
+    list-style: disc;
+    margin-left: 1em;
+    li {
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  ol {
+    list-style: numeric;
+    margin-left: 1em;
+    li {
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  blockquote {
+    @apply border-l-2 pl-4 text-balance;
+    border-color: var(--color-red);
   }
 }
 

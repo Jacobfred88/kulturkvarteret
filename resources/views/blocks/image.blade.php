@@ -1,16 +1,16 @@
-<section data-block-name="image">
-    <div class="container py-32">
-        <div class="relative aspect-video">
+<section data-block-name="image" class="my-24 md:my-36">
+    <div class="container">
+        <div class="relative aspect-square md:aspect-[2.41] rounded-lg overflow-hidden">
             <x-responsivemedia :mediagroup="$responsivemediagroup" />
         </div>
 
-        <div class="flex justify-between">
+        <div class="flex flex-col md:flex-row gap-y-1 justify-between mt-2.5">
             @if ($caption)
-                <p>{{ $caption }}</p>
+                <p class="text-10 uppercase">{{ $caption }}</p>
             @endif
 
             @if ($credit)
-                <p>Credit: {{ $credit }}</p>
+                <p class="text-10 uppercase">Credit: {{ $credit }}</p>
             @endif
         </div>
     </div>
