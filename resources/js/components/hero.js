@@ -82,7 +82,7 @@ const Hero = () => {
       if (nextSection) {
         gsap.to(window, {
           duration: 1,
-          scrollTo: nextSection,
+          scrollTo: window.innerHeight,
           ease: "power2.inOut",
         });
       }

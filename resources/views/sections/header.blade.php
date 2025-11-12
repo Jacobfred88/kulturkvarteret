@@ -1,10 +1,11 @@
 @php
     $translations = array_reverse(pll_the_languages(['raw' => 1]));
+    $current = pll_current_language();
 @endphp
 <header class="absolute w-full z-50 text-white py-5">
     <div class="container grid">
         <div class="col-span-6 lg:col-span-9">
-            <a class="w-[8.4375rem] block lg:fixed" href="{{ home_url('/') }}" x-data="logo">
+            <a class="w-[8.4375rem] block lg:fixed" href="{{ home_url('/') }}{{ $current != 'da' ? $current : '' }}" x-data="logo">
                 <x-logo />
             </a>
         </div>

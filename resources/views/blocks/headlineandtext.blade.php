@@ -1,5 +1,5 @@
-<section data-block-name="headlineandtext">
-    <div class="container grid py-14 md:py-32">
+<section data-block-name="headlineandtext" class="my-14 md:my-32">
+    <div class="container grid">
         <div class="col-span-12 lg:col-span-9">
             @if ($headline)
                 <h2 class="text-32 md:text-50 uppercase text-balance max-w-4xl">{{ $headline }}</h2>

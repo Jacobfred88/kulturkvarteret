@@ -10,6 +10,8 @@ gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
 import { Logo } from "./components/logo";
 import { Hero } from "./components/hero";
+import { Alignheight } from "./components/alignheight";
+import { Entries } from "./components/entries";
 
 document.addEventListener("DOMContentLoaded", function () {
   Alpine.store("menu", {
@@ -28,5 +30,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   Logo();
   Hero();
+  Alignheight();
+  Entries();
   Alpine.start();
 });

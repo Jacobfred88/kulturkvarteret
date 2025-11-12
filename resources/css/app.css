@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 @import "tailwindcss";
+@import "flickity/dist/flickity.min.css";
 @source "../views/";
 @source "../../app/";
 
@@ -111,6 +112,10 @@ body {
     @apply border-l-2 pl-4 text-balance;
     border-color: var(--color-red);
   }
+}
+
+.flickity-viewport {
+  overflow: initial;
 }
 
 [x-cloak] {
