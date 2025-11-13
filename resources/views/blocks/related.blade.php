@@ -29,7 +29,7 @@
 
                                         <a href="{{ get_permalink($item) }}" class="block">
 
-                                            <div class="relative  aspect-square rounded-lg overflow-hidden">
+                                            <div class="relative  aspect-square rounded-lg overflow-hidden fx-hover-zoom">
                                                 <x-media :mediagroup="$fields['mediagroup']" />
                                             </div>
 

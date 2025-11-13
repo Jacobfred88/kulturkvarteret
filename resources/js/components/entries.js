@@ -19,15 +19,16 @@ const Entries = () => {
         this.active = index;
       });
 
-      this.flkty.on("resize", this.alignCards.bind(this));
+      // this.flkty.on("resize", this.alignCards.bind(this));
+
+      window.addEventListener("resize", this.alignCards.bind(this));
       requestAnimationFrame(() => {
         this.alignCards();
       });
     },
     alignCards() {
-      console.log("ready!", this.flkty.cells);
-
       this.setTallestHeight(this.flkty.cells);
+      this.flkty.resize();
     },
 
     setTallestHeight(cells) {

@@ -19,8 +19,8 @@ const Hero = () => {
         tl.fromTo(
           this.$refs.media,
           { scale: 1.1 },
-          { scale: 1, duration: 1.6 },
-          "-=80%",
+          { scale: 1, duration: 1.6, delay: this.$refs.gradient ? 0 : 0.4 },
+          this.$refs.gradient ? "-=80%" : undefined,
         );
       }
 

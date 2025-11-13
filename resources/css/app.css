@@ -118,6 +118,13 @@ body {
   overflow: initial;
 }
 
+.fx-hover-zoom {
+  @apply overflow-hidden;
+  > * {
+    @apply hover:scale-105 transition-transform duration-500 ease-in-out;
+  }
+}
+
 [x-cloak] {
   display: none !important;
 }
