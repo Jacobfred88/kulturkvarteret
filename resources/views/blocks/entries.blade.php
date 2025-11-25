@@ -8,8 +8,14 @@
                     @endif
 
                     <div class="mt-8 gap-x-2.5 hidden md:flex">
-                        <button class="size-8 border rounded-full cursor-pointer border-red hover:bg-red hover:text-white duration-300" @click="prev">←</button>
-                        <button class="size-8 border rounded-full cursor-pointer border-red hover:bg-red hover:text-white duration-300" @click="next">→</button>
+                        <button class="relative size-8 border rounded-full cursor-pointer border-red hover:bg-red hover:text-white duration-300 group overflow-hidden" @click="prev">
+                            <span class="absolute top-0 left-0 w-full h-full flex items-center justify-center group-hover:-translate-x-1/2 group-hover:opacity-0 duration-300">←</span>
+                            <span class="absolute top-0 left-0 w-full h-full flex items-center justify-center translate-x-1/2 group-hover:translate-x-0 opacity-0 group-hover:opacity-100 duration-300">←</span>
+                        </button>
+                        <button class="relative size-8 border rounded-full cursor-pointer border-red hover:bg-red hover:text-white duration-300 group overflow-hidden" @click="next">
+                            <span class="absolute top-0 left-0 w-full h-full flex items-center justify-center group-hover:translate-x-1/2 group-hover:opacity-0 duration-300">→</span>
+                            <span class="absolute top-0 left-0 w-full h-full flex items-center justify-center -translate-x-1/2 group-hover:translate-x-0 opacity-0 group-hover:opacity-100 duration-300">→</span>
+                        </button>
                     </div>
                     <div class="absolute  -top-5 -bottom-5 -left-5 w-5  bg-white hidden lg:block"></div>
                     <div class="absolute  -top-5 -bottom-5 -right-5 w-5  bg-gradient-to-tr from-white to-red/0 hidden lg:block"></div>

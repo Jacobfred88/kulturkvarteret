@@ -2,7 +2,7 @@
     <div class="container grid">
         <div class="col-span-12 lg:col-span-9">
             @if ($headline)
-                <h2 class="text-32 md:text-50 uppercase text-balance max-w-4xl">{{ $headline }}</h2>
+                <h2 class="text-32 md:text-50 uppercase text-balance max-w-4xl" x-cloak x-data="animate('revealchar')">{{ $headline }}</h2>
             @endif
         </div>
         <div class="col-span-12 lg:col-span-3 mt-10 md:mt-6">

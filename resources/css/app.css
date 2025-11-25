@@ -128,3 +128,7 @@ body {
 [x-cloak] {
   display: none !important;
 }
+
+[x-data*="animate"] {
+  opacity: 0;
+}

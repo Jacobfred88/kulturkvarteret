@@ -9,7 +9,7 @@
     </div>
     <div class="container grid relative">
         <div class="col-span-12 lg:col-span-9 lg:col-start-4">
-            <h1 class="text-32 md:text-50 text-white uppercase opacity-0" x-ref="text">{!! $headline !!}</h1>
+            <h1 class="text-32 md:text-50 text-white uppercase" x-cloak x-ref="text">{!! $headline !!}</h1>
         </div>
     </div>
 </section>

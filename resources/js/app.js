@@ -5,13 +5,16 @@ import gsap from "gsap";
 
 import ScrollTrigger from "gsap/ScrollTrigger";
 import ScrollToPlugin from "gsap/ScrollToPlugin";
+import SplitText from "gsap/SplitText";
 
-gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
+gsap.registerPlugin(ScrollTrigger, ScrollToPlugin, SplitText);
 
 import { Logo } from "./components/logo";
 import { Hero } from "./components/hero";
 import { Alignheight } from "./components/alignheight";
 import { Entries } from "./components/entries";
+import { Animate } from "./components/animate";
+import { Menu } from "./components/menu";
 
 document.addEventListener("DOMContentLoaded", function () {
   Alpine.store("menu", {
@@ -32,5 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
   Hero();
   Alignheight();
   Entries();
+  Animate();
+  Menu();
   Alpine.start();
 });

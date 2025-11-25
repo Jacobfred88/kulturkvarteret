@@ -26,7 +26,7 @@
 
     </div>
 </header>
-<div x-data x-cloak x-show="$store.menu.open" class="fixed top-0 left-0 w-full h-svh backdrop-blur-[75px]  bg-gradient-to-t from-red to-red/0 z-40 py-40 lg:py-50 text-white overflow-y-scroll">
+<div x-data="menu" x-cloak class="fixed top-0 left-0 w-full h-svh backdrop-blur-[75px]  bg-gradient-to-t from-red to-red/0 z-40 py-40 lg:py-50 text-white overflow-y-scroll">
     <div class="container">
         <ul class="flex lg:hidden mb-12">
             @foreach ($translations as $translation)
