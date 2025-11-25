@@ -51,7 +51,7 @@ html {
   @apply overscroll-none;
 }
 body {
-  @apply bg-white text-red font-sans font-medium antialiased overflow-x-clip;
+  @apply text-16  bg-white text-red font-sans font-medium antialiased overflow-x-clip;
   @apply overscroll-y-none;
 }
 
