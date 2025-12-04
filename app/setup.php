@@ -90,6 +90,12 @@ add_action('after_setup_theme', function () {
         $role->add_cap( 'edit_theme_options', true );
     }, 11 );
 
+
+
+    // Hide "Posts" (blog posts) from the admin menu
+    add_action('admin_menu', function () {
+        remove_menu_page('edit.php');
+    }, 999);
     /**
      * Hide comments from admin menu.
      */
@@ -188,6 +194,9 @@ add_action('after_setup_theme', function () {
 }, 20);
 
 add_filter( 'show_admin_bar', '__return_false' );
+
+remove_action( 'wp_enqueue_scripts', 'wp_enqueue_global_styles' );
+remove_action( 'wp_footer', 'wp_enqueue_global_styles', 1 );
 
 /**
  * Register the theme sidebars.

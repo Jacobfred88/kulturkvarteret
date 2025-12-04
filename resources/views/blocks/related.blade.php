@@ -19,38 +19,38 @@
             <div class="col-span-12 lg:col-span-9">
                 @if ($items)
                     <div class="images">
-                        @foreach (range(1, 20) as $i)
-                            @foreach ($items as $item)
-                                @php
-                                    $fields = get_fields($item->ID);
-                                @endphp
-                                <div class="w-[95%] lg:w-[calc(33.333%-0.8rem)] mr-5 flex flex-col slide">
-                                    <div class="mb-4 w-full col-span-12">
 
-                                        <a href="{{ get_permalink($item) }}" class="block">
+                        @foreach ($items as $item)
+                            @php
+                                $fields = get_fields($item->ID);
+                            @endphp
+                            <div class="w-[95%] lg:w-[calc(33.333%-0.8rem)] mr-5 flex flex-col slide">
+                                <div class="mb-4 w-full col-span-12">
 
-                                            <div class="relative  aspect-square rounded-lg overflow-hidden fx-hover-zoom">
-                                                <x-media :mediagroup="$fields['mediagroup']" />
-                                            </div>
+                                    <a href="{{ get_permalink($item) }}" class="block">
 
-                                        </a>
-
-                                    </div>
-                                    <div class="col-span-12 flex-shrink-0 flex flex-col flex-grow">
-
-                                        <h3 class="text-24 lg:text-32 uppercase h-[var(--alignheightheadline)]" data-alignheight-headline>{{ $fields['headline'] ? $fields['headline'] : $item->post_title }}</h3>
-
-                                        <div class="mt-10 flex flex-col flex-grow justify-between max-w-xs h-[var(--alignheighttext)]" data-alignheight-text>
-
-                                            <div class="richtext">{!! $fields['intro'] !!}</div>
-
-                                            <a href="{{ get_permalink($item) }}" class="link-btn mt-8 inline-block">Læs mere</a>
+                                        <div class="relative  aspect-square rounded-lg overflow-hidden fx-hover-zoom">
+                                            <x-media :mediagroup="$fields['mediagroup']" />
                                         </div>
 
-                                    </div>
+                                    </a>
+
                                 </div>
-                            @endforeach
+                                <div class="col-span-12 flex-shrink-0 flex flex-col flex-grow">
+
+                                    <h3 class="text-24 lg:text-32 uppercase h-[var(--alignheightheadline)]" data-alignheight-headline>{{ $fields['headline'] ? $fields['headline'] : $item->post_title }}</h3>
+
+                                    <div class="mt-10 flex flex-col flex-grow justify-between max-w-xs h-[var(--alignheighttext)]" data-alignheight-text>
+
+                                        <div class="richtext">{!! $fields['intro'] !!}</div>
+
+                                        <a href="{{ get_permalink($item) }}" class="link-btn mt-8 inline-block">Læs mere</a>
+                                    </div>
+
+                                </div>
+                            </div>
                         @endforeach
+
                     </div>
 
                 @endif
