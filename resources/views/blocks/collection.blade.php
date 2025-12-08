@@ -6,7 +6,7 @@
             </h2>
         @endif
         @if ($items)
-            <ul class="flex flex-wrap text-32 md:text-50" x-cloak x-data="animate('revealchildren')">
+            <ul class="flex flex-wrap text-32 md:text-50 uppercase" x-cloak x-data="animate('revealchildren')">
 
                 @foreach ($items as $item)
                     @php

@@ -92,7 +92,7 @@
             $link_classes = match ($depth) {
                 0 => 'text-32 lg:text-50 uppercase',
                 1 => 'text-24 lg:text-30 uppercase',
-                default => 'text-24 lg:text-30',
+                default => 'text-24 lg:text-30 uppercase',
             };
 
             if ($has_children) {
