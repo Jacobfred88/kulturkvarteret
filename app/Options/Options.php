@@ -51,7 +51,13 @@ class Options extends Field
                 'label' => 'Socials'
             ])
                 ->addLink('social')
-            ->endRepeater();
+            ->endRepeater()
+            ->addText('newsletterheadline', [
+                'label' => 'Newsletter: Headline'
+            ])
+             ->addLink('newsletterlink', [
+                'label' => 'Newsletter: Link'
+            ]);
 
         return $options->build();
     }
