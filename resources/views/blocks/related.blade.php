@@ -44,7 +44,10 @@
 
                                         <div class="richtext">{!! $fields['intro'] !!}</div>
 
-                                        <a href="{{ get_permalink($item) }}" class="link-btn mt-8 inline-block">Læs mere</a>
+                                        @php
+                                            $readMore = function_exists('pll_current_language') && pll_current_language('slug') === 'en' ? 'Read more' : 'Læs mere';
+                                        @endphp
+                                        <a href="{{ get_permalink($item) }}" class="link-btn mt-8 inline-block">{{ $readMore }}</a>
                                     </div>
 
                                 </div>

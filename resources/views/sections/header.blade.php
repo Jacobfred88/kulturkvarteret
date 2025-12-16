@@ -21,7 +21,11 @@
                 @endforeach
             </ul>
 
-            <button class="text-16 font-bold uppercase cursor-pointer outline-0" @click="$store.menu.toggle()" x-data x-text="$store.menu.open ? 'Close X' : 'Menu'">Menu</button>
+            @php
+                $closelabel = function_exists('pll_current_language') && pll_current_language('slug') === 'en' ? 'Close X' : 'Luk X';
+            @endphp
+
+            <button class="text-16 font-bold uppercase cursor-pointer outline-0" @click="$store.menu.toggle()" x-data x-text="$store.menu.open ? '{{ $closelabel }}' : 'Menu'">Menu</button>
         </div>
 
     </div>
