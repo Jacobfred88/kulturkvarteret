@@ -5,7 +5,7 @@
 <header class="absolute w-full z-50 text-white py-5">
     <div class="container grid">
         <div class="col-span-6 lg:col-span-9">
-            <a class="w-[8.4375rem] block lg:fixed" href="{{ home_url('/') }}{{ $current != 'da' ? $current : '' }}" x-data="logo">
+            <a class="w-[8.4375rem] lg:w-[14.765625rem] block lg:fixed" href="{{ home_url('/') }}{{ $current != 'da' ? $current : '' }}" x-data="logo">
                 <x-logo />
             </a>
         </div>
