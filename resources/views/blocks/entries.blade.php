@@ -41,7 +41,7 @@
                                 <div class="col-span-12 flex-shrink-0 flex flex-col flex-grow">
 
                                     @if (!empty($entry['headline']))
-                                        <h3 class="text-24 lg:text-32 uppercase h-[var(--alignheightheadline)]" data-alignheight-headline>{{ $entry['headline'] }}</h3>
+                                        <h3 class="text-24 lg:text-32 uppercase h-[var(--alignheightheadline)]" data-alignheight-headline>{!! $entry['headline'] !!}</h3>
                                     @endif
 
                                     <div class="mt-10 flex flex-col flex-grow justify-between max-w-xs h-[var(--alignheighttext)]" data-alignheight-text>

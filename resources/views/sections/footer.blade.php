@@ -33,7 +33,10 @@
         @if (get_field('newsletterheadline', 'option') || get_field('newsletterlink', 'option'))
             <div class="col-span-12 lg:col-span-3 lg:col-start-10 mt-12 lg:mt-0">
                 <p class="text-18 font-medium">{{ get_field('newsletterheadline', 'option') }}</p>
-                <p class="text-18 font-semibold"><a href="{{ get_field('newsletterlink', 'option')['url'] }}" target="{{ get_field('newsletterlink', 'option')['target'] }}" class="link-btn">{{ get_field('newsletterlink', 'option')['title'] }}</a></p>
+                @if (get_field('newsletterlink', 'option') && get_field('newsletterlink', 'option')['url'])
+                    <p class="text-18 font-semibold"><a href="{{ get_field('newsletterlink', 'option')['url'] }}" target="{{ get_field('newsletterlink', 'option')['target'] }}" class="link-btn">{{ get_field('newsletterlink', 'option')['title'] }}</a>
+                    </p>
+                @endif
 
             </div>
         @endif
