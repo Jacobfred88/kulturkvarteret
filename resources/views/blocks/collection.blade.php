@@ -2,7 +2,7 @@
     <div class="container">
         @if ($headline)
             <h2 class="text-16 max-w-[17.5rem] text-balance mb-5">
-                {{ $headline }}
+                {!! $headline !!}
             </h2>
         @endif
         @if ($items)

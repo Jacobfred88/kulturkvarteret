@@ -5,7 +5,7 @@
             <div class="col-span-12 lg:col-span-3">
                 <div class="relative h-full bg-white z-[1]">
                     @if ($headline)
-                        <h2 class="text-16 max-w-[16rem] text-balance">{{ $headline }}</h2>
+                        <h2 class="text-16 max-w-[16rem] text-balance">{!! $headline !!}</h2>
                     @endif
 
                     <div class="mt-8 gap-x-2.5 hidden md:flex">
@@ -38,7 +38,7 @@
                                 </div>
                                 <div class="col-span-12 flex-shrink-0 flex flex-col flex-grow">
 
-                                    <h3 class="text-24 xl:text-32 uppercase h-[var(--alignheightheadline)] pr-8" data-alignheight-headline>{{ $fields['headline'] ? $fields['headline'] : $item->post_title }}</h3>
+                                    <h3 class="text-24 xl:text-32 uppercase h-[var(--alignheightheadline)] pr-8" data-alignheight-headline>{!! $fields['headline'] ? $fields['headline'] : $item->post_title !!}</h3>
 
                                     <div class="mt-10 flex flex-col flex-grow justify-between max-w-xs h-[var(--alignheighttext)]" data-alignheight-text>
 

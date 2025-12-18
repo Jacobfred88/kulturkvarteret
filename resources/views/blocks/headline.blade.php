@@ -2,7 +2,7 @@
     <div class="container grid">
         <div class="col-span-12 lg:col-span-9">
             @if ($headline)
-                <h2 class="text-24 md:text-32 text-balance max-w-5xl">{{ $headline }}</h2>
+                <h2 class="text-24 md:text-32 text-balance max-w-5xl">{!! $headline !!}</h2>
             @endif
         </div>
     </div>
