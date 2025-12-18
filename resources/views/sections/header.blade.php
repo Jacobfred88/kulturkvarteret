@@ -63,7 +63,7 @@
         {
             $indent = str_repeat("\t", $depth);
             $classes = match ($depth) {
-                0 => 'submenu mt-8 mb-8',
+                0 => 'submenu flex flex-wrap mt-8 mb-8',
                 1 => 'submenu-level-2 mt-8 flex flex-wrap',
                 default => 'submenu-level-' . ($depth + 1),
             };
@@ -83,7 +83,7 @@
             $classes = empty($item->classes) ? [] : (array) $item->classes;
             $classes[] = match ($depth) {
                 0 => 'mb-1 lg:mb-2',
-                1 => 'mb-1 lg:mb-2',
+                1 => 'mb-1 lg:mb-2 after:content-[","] after:mr-2.5 last:after:hidden',
                 default => 'mb-8 after:content-[","] after:mr-2.5 last:after:hidden',
             };
 
@@ -95,7 +95,7 @@
 
             $link_classes = match ($depth) {
                 0 => 'text-32 lg:text-50 uppercase',
-                1 => 'text-24 lg:text-30 uppercase',
+                1 => 'text-24 lg:text-30 uppercase hover:underline underline-offset-2 decoration-2',
                 default => 'text-24 lg:text-30 uppercase',
             };
 

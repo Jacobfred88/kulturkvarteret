@@ -12,7 +12,8 @@
                     @php
                         $fields = get_fields($item->ID);
                     @endphp
-                    <li class="after:content-[','] mr-2 last:mr-0 last:after:hidden"><a href="{{ get_permalink($item) }}">{{ $fields['headline'] ? $fields['headline'] : $item->post_title }}</a></li>
+                    <li class="after:content-[','] mr-2 last:mr-0 last:after:hidden"><a href="{{ get_permalink($item) }}" class="hover:underline underline-offset-2 decoration-4">{{ $fields['headline'] ? $fields['headline'] : $item->post_title }}</a>
+                    </li>
                 @endforeach
 
             </ul>
