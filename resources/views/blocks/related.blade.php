@@ -38,11 +38,11 @@
                                 </div>
                                 <div class="col-span-12 flex-shrink-0 flex flex-col flex-grow">
 
-                                    <h3 class="text-24 lg:text-32 uppercase h-[var(--alignheightheadline)]" data-alignheight-headline>{{ $fields['headline'] ? $fields['headline'] : $item->post_title }}</h3>
+                                    <h3 class="text-24 xl:text-32 uppercase h-[var(--alignheightheadline)] pr-8" data-alignheight-headline>{{ $fields['headline'] ? $fields['headline'] : $item->post_title }}</h3>
 
                                     <div class="mt-10 flex flex-col flex-grow justify-between max-w-xs h-[var(--alignheighttext)]" data-alignheight-text>
 
-                                        <div class="richtext">{!! $fields['intro'] !!}</div>
+                                        <div class="richtext pr-8">{!! $fields['intro'] !!}</div>
 
                                         @php
                                             $readMore = function_exists('pll_current_language') && pll_current_language('slug') === 'en' ? 'Read more' : 'Læs mere';
