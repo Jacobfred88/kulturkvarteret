@@ -32,7 +32,7 @@
                                         <a href="{{ $entry['link']['url'] }}" target="{{ $entry['link']['target'] }}" class="block">
                                     @endif
                                     <div class="relative @if ($format == 'portrait') aspect-[0.734] @else aspect-square @endif  rounded-lg overflow-hidden @if (!empty($entry['link'])) fx-hover-zoom @endif">
-                                        <x-media :mediagroup="$entry['mediagroup']" />
+                                        <x-media :mediagroup="$entry['mediagroup']" sizes="500px" />
                                     </div>
                                     @if (!empty($entry['link']))
                                         </a>

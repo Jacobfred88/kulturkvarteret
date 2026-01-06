@@ -193,6 +193,19 @@ add_action('after_setup_theme', function () {
 
 }, 20);
 
+add_filter('wp_calculate_image_srcset', function ($sources, $size_array, $image_src, $image_meta, $attachment_id) {
+
+    $max_width = 1680; // your hard cap
+
+    foreach ($sources as $width => $source) {
+        if ($width > $max_width) {
+            unset($sources[$width]);
+        }
+    }
+
+    return $sources;
+}, 10, 5);
+
 add_filter( 'show_admin_bar', '__return_false' );
 
 remove_action( 'wp_enqueue_scripts', 'wp_enqueue_global_styles' );

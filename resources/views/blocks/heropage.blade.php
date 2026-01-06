@@ -1,7 +1,7 @@
 <section data-block-name="heropage" class="relative h-[70svh] flex items-center bg-red" x-data="hero">
     <div class="absolute inset-0 w-full h-full overflow-hidden">
         <div x-ref="media" class="absolute inset-0 w-full h-full scale-110 will-change-transform">
-            <x-responsivemedia :mediagroup="$responsivemediagroup" />
+            <x-responsivemedia :mediagroup="$responsivemediagroup" sizes="1600px" />
         </div>
         @if (!$removegradiant)
             <div x-ref="gradient" class="absolute inset-0 bg-gradient-to-t from-red/70 to-red/0 opacity-0"></div>

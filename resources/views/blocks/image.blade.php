@@ -1,7 +1,7 @@
 <section data-block-name="image" class="my-24 md:my-36">
     <div class="container">
         <div class="relative aspect-square md:aspect-[2.41] rounded-lg overflow-hidden">
-            <x-responsivemedia :mediagroup="$responsivemediagroup" />
+            <x-responsivemedia :mediagroup="$responsivemediagroup" sizes="1600px" />
         </div>
 
         <div class="flex flex-col md:flex-row gap-y-1 justify-between mt-2.5">

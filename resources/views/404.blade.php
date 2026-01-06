@@ -1,13 +1,21 @@
 @extends('layouts.app')
 
 @section('content')
-  @include('partials.page-header')
 
-  @if (! have_posts())
-    <x-alert type="warning">
-      {!! __('Sorry, but the page you are trying to view does not exist.', 'sage') !!}
-    </x-alert>
+    @php
 
-    {!! get_search_form(false) !!}
-  @endif
+        $page_404 = get_page_by_path('404');
+        if ($page_404) {
+            // Set up global post data
+            global $post;
+            $post = $page_404;
+            setup_postdata($post);
+        }
+
+    @endphp
+    @if (get_field('layout_blocks'))
+        @foreach (get_field('layout_blocks') as $block)
+            @include('blocks.' . $block['acf_fc_layout'], $block)
+        @endforeach
+    @endif
 @endsection

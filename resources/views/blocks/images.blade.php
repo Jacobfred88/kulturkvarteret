@@ -4,7 +4,7 @@
             @foreach ($images as $image)
                 <div class="col-span-12 md:col-span-6">
                     <div class="relative aspect-square md:aspect-[1.43] rounded-lg overflow-hidden">
-                        <x-media :mediagroup="$image['mediagroup']" />
+                        <x-media :mediagroup="$image['mediagroup']" sizes="800px" />
                     </div>
 
                     <div class="flex flex-col md:flex-row gap-y-1 justify-between mt-2.5">
