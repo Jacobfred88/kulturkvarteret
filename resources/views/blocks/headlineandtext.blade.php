@@ -5,7 +5,7 @@
                 <h2 class="text-32 md:text-50 uppercase text-balance max-w-4xl" x-cloak x-data="animate('revealchar')">{!! $headline !!}</h2>
             @endif
         </div>
-        <div class="col-span-12 lg:col-span-3 mt-10 md:mt-6">
+        <div class="col-span-12 lg:col-span-3">
             @if ($text)
                 <div class="mb-5 max-w-md">{!! $text !!}</div>
             @endif
