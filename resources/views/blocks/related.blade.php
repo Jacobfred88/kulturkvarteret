@@ -24,7 +24,7 @@
                             @php
                                 $fields = get_fields($item->ID);
                             @endphp
-                            <div class="w-[95%] lg:w-[calc(33.333%-0.8rem)] mr-5 flex flex-col slide">
+                            <div class="w-[95%] md:w-[calc(50%-0.8rem)] xl:w-[calc(33.333%-0.8rem)] mr-5 flex flex-col slide">
                                 <div class="mb-4 w-full col-span-12">
 
                                     <a href="{{ get_permalink($item) }}" class="block">
@@ -38,7 +38,7 @@
                                 </div>
                                 <div class="col-span-12 flex-shrink-0 flex flex-col flex-grow">
 
-                                    <h3 class="text-24 xl:text-32 uppercase h-[var(--alignheightheadline)] pr-8" data-alignheight-headline>{!! $fields['headline'] ? $fields['headline'] : $item->post_title !!}</h3>
+                                    <h3 class="text-24 xxl:text-32 uppercase h-[var(--alignheightheadline)] pr-8" data-alignheight-headline>{!! $fields['headline'] ? $fields['headline'] : $item->post_title !!}</h3>
 
                                     <div class="mt-10 flex flex-col flex-grow justify-between max-w-xs h-[var(--alignheighttext)]" data-alignheight-text>
 
