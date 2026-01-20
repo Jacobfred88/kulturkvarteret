@@ -30,6 +30,7 @@
     {{-- <x-debug /> --}}
 
     @php(do_action('get_footer'))
+    @vite(['resources/js/app.js'])
     @php(wp_footer())
 </body>
 
