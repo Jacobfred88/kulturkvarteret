@@ -4,12 +4,9 @@ const Menu = () => {
   Alpine.data("menu", () => ({
     init() {
       gsap.set(this.$el, { autoAlpha: 0 });
-      console.log("Menu init!");
 
       this.timeline = this.createTimeline();
       this.$watch("$store.menu.open", (value) => {
-        console.log("Menu watch:", value, this.timeline);
-
         if (value) {
           this.timeline.timeScale(1);
           this.timeline.play();

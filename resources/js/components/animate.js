@@ -6,7 +6,7 @@ const Animate = () => {
     init() {
       document.fonts.ready.then(() => {
         gsap.set(this.$root, { opacity: 1 });
-        console.log("ready!");
+
         if (key == "revealchar") {
           this.revealChar();
         }
@@ -17,7 +17,6 @@ const Animate = () => {
       });
     },
     revealChildren() {
-      console.log("reveal children", this.$root);
       var elm = this.$root;
       gsap.fromTo(
         elm.children,
