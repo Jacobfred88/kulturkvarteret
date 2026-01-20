@@ -104,8 +104,50 @@ add_action('after_setup_theme', function () {
     });
 
     add_action( 'wp_enqueue_scripts', function (){
-            wp_dequeue_style( 'global-styles' );
-        } );
+            // wp_dequeue_style( 'global-styles' );
+
+        global $wp_scripts, $wp_styles;
+
+        if (! empty($wp_scripts->registered) && is_array($wp_scripts->registered)) {
+            foreach ($wp_scripts->registered as $handle => $script) {
+                if (strpos($script->src ?? '', 'wp-smartcrop/js/jquery.wp-smartcrop.min.js') !== false) {
+                    wp_dequeue_script($handle);
+                    wp_deregister_script($handle);
+                }
+            }
+        }
+
+        if (! empty($wp_styles->registered) && is_array($wp_styles->registered)) {
+            foreach ($wp_styles->registered as $handle => $style) {
+                if (strpos($style->src ?? '', 'wp-smartcrop/css/image-renderer.css') !== false) {
+                    wp_dequeue_style($handle);
+                    wp_deregister_style($handle);
+                }
+            }
+        }
+
+        wp_dequeue_script('jquery');
+        wp_deregister_script('jquery');
+        wp_dequeue_script('wp-emoji-release');
+        wp_deregister_script('wp-emoji-release');
+        wp_dequeue_style( 'global-styles' );
+
+        remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
+        remove_action( 'admin_print_scripts', 'print_emoji_detection_script' );
+        remove_action( 'wp_print_styles', 'print_emoji_styles' );
+        remove_action( 'admin_print_styles', 'print_emoji_styles' );
+        remove_filter( 'the_content_feed', 'wp_staticize_emoji' );
+        remove_filter( 'comment_text_rss', 'wp_staticize_emoji' );
+        remove_filter( 'wp_mail', 'wp_staticize_emoji_for_email' );
+
+    });
+
+    /**
+ * Disable the emoji's
+ */
+
+// add_action( 'init', 'disable_emojis' );
+
 
 
     /**
