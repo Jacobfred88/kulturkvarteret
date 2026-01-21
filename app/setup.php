@@ -103,6 +103,11 @@ add_action('after_setup_theme', function () {
         remove_menu_page('edit-comments.php');
     });
 
+    add_filter( 'redirection_role', function () {
+      return 'edit_pages';
+    });
+
+
     add_action( 'wp_enqueue_scripts', function (){
             // wp_dequeue_style( 'global-styles' );
 
