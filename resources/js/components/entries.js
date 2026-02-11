@@ -13,6 +13,7 @@ const Entries = () => {
         pageDots: false,
         wrapAround: true,
         prevNextButtons: false,
+        dragThreshold: 35,
       });
 
       this.flkty.on("select", (index) => {
