@@ -45,8 +45,8 @@
                 <x-logo />
             </a>
 
-            <a class="w-[4rem] md:w-[6.5rem] -mb-1.5 block" href="https://kulturkbh.dk/" target="_blank" rel="noopener">
-                <img src="{{ asset('resources/images/kulturkbhlogo.jpg') }}" alt="">
+            <a class="w-[6rem] md:w-[9rem] translate-[20%] block" href="https://kulturkbh.dk/" target="_blank" rel="noopener">
+                <img src="{{ asset('resources/images/kulturkbh-logo-hvid.png') }}" alt="">
             </a>
         </div>
     </div>
