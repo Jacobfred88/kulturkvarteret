@@ -40,9 +40,13 @@
 
             </div>
         @endif
-        <div class="col-span-12 mt-12 md:mt-32">
+        <div class="col-span-12 mt-12 md:mt-32 flex justify-between items-end">
             <a class="w-[8.4375rem] lg:w-[18.3125rem] block" href="{{ home_url('/') }}">
                 <x-logo />
+            </a>
+
+            <a class="w-[4rem] md:w-[6.5rem] -mb-1.5 block" href="https://kulturkbh.dk/" target="_blank" rel="noopener">
+                <img src="{{ asset('resources/images/kulturkbhlogo.jpg') }}" alt="">
             </a>
         </div>
     </div>
